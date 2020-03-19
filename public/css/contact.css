@@ -1,0 +1,35 @@
+.btn-ajouter
+{
+    margin-bottom: 3rem;
+}
+
+#champ-recherche
+{
+    width: 300px;
+    margin-left: .5rem;
+}
+
+#tableau-contact
+{
+    margin-bottom: 1rem;
+}
+
+img
+{
+    width: 1rem;
+}
+
+form
+{
+    padding: auto;
+}
+
+.mme
+{
+    color: pink;
+}
+
+.r
+{
+    color: blue;
+}
