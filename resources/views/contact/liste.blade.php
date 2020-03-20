@@ -85,22 +85,22 @@
                                 @if ( $contact->civilite === 1)
                                 <!-- <td> Mr </td> -->
                                 <td>
-                                    <img src="img/mr.svg" alt="Monsieur" class="mr">
+                                    <img src="img/mr.svg" alt="Monsieur" class="mr genre">
                                 </td>
                                 @else
                                 <!-- <td> Mme </td> -->
                                 <td>
-                                    <img src="img/mme.svg" alt="Madame" class="mme">
+                                    <img src="img/mme.svg" alt="Madame" class="mme genre">
                                 </td>
                                 @endif
 
-                                <td> {{ $contact->prenom }} </td>
-                                <td> {{ $contact->nom }} </td>
-                                <td> {{ $contact->tel }} </td>
-                                <td> {{ $contact->email }} </td>
-                                <td> {{ $contact->societe }} </td>
-                                <td> {{ $contact->ville }} </td>
-                                <td>
+                                <td class="prenom"> {{ $contact->prenom }} </td>
+                                <td class="nom"> {{ $contact->nom }} </td>
+                                <td class="tel"> {{ $contact->tel }} </td>
+                                <td class="email"> {{ $contact->email }} </td>
+                                <td class="societe"> {{ $contact->societe }} </td>
+                                <td class="ville"> {{ $contact->ville }} </td>
+                                <td class="options">
                                     <!-- <span class="voir">show</span> -->
                                     <img src="img/voir.svg" alt="">
                                     <img src="img/edit.svg" alt="">
@@ -117,7 +117,16 @@
                     <div class="col-md-6 col-lg-6 col-sm-6">
                         <!-- Champ de recherche -->
                         <p>
-                            <span>Rechercher <input type="text" id="champ-recherche"></span>
+                            <span>
+                                Nombre de lignes: 
+                                <select name="nblignes" id="nblignes">
+                                    <option value="15">15</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="75">75</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </span>
                         </p>
                     </div>
                     <div class="col-md-6 col-lg-6 col-sm-6 text-right">

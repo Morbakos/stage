@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 class ContactController extends Controller
 {
     protected $contactRepository;
-    protected $nbParPage = 15;
 
     public function __construct(ContactRepository $contactRepository)
     {
@@ -21,9 +20,14 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($nbParPage = 15)
     {
-        $contacts = $this->contactRepository->getPaginate($this->nbParPage);
+        if(isset($_GET['nbParPage']))
+        {
+            $nbParPage = $_GET['nbParPage'];
+        }
+
+        $contacts = $this->contactRepository->getPaginate($nbParPage);
         $links = $contacts->render();
         return view('contact/liste', compact('contacts', 'links'));
     }
