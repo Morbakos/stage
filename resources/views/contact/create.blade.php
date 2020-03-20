@@ -31,6 +31,9 @@
                 <div class="form-group">
                     Madame {{ Form::radio('civilite', '0', false) }}
                     Monsieur {{ Form::radio('civilite', '1', false) }}
+
+                    <!-- Gestion d'erreur -->
+                    {!! $errors->first('civilite', '<span class="help-block alert-danger">:message</span>') !!}
                 </div>
 
                 <!-- Identité -->
@@ -46,6 +49,9 @@
                                     'placeholder' => 'Prénom'
                                 ]
                             ) }}
+
+                            <!-- Gestion d'erreur -->
+                            {!! $errors->first('prenom', '<span class="help-block alert-danger">:message</span>') !!}
                         </div>
                         <div class="col">
                             <label for="nom">Nom: </label>
@@ -57,6 +63,9 @@
                                     'placeholder' => 'Nom'
                                 ]
                             ) }}
+
+                            <!-- Gestion d'erreur -->
+                            {!! $errors->first('nom', '<span class="help-block alert-danger">:message</span>') !!}
                         </div>
                     </div>
                 </div>
@@ -85,6 +94,9 @@
                                     'placeholder' => 'Email'
                                 ]
                             ) }}
+
+                            <!-- Gestion d'erreur -->
+                            {!! $errors->first('email', '<span class="help-block alert-danger">:message</span>') !!}
                         </div>
                     </div>
                 </div>

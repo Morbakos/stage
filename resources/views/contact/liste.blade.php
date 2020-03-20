@@ -50,7 +50,7 @@
 
                 <div class="row">
                     <!-- Tableau des contacts -->
-                    <table class="table table-striped table-bordered table-hover table-sm" id="tableau-contact">
+                    <table class="table table-striped table-bordered table-hover table-sm table-reponsive" id="tableau-contact">
                         <thead>
                             <th>
                                 <p>Civilité</p>
@@ -83,12 +83,10 @@
                             <tr>
 
                                 @if ( $contact->civilite === 1)
-                                <!-- <td> Mr </td> -->
                                 <td>
                                     <img src="img/mr.svg" alt="Monsieur" class="mr genre">
                                 </td>
                                 @else
-                                <!-- <td> Mme </td> -->
                                 <td>
                                     <img src="img/mme.svg" alt="Madame" class="mme genre">
                                 </td>
@@ -115,7 +113,7 @@
 
                 <div class="row">
                     <div class="col-md-6 col-lg-6 col-sm-6">
-                        <!-- Champ de recherche -->
+                        <!-- Nombre de lignes à afficher -->
                         <p>
                             <span>
                                 Nombre de lignes: 
