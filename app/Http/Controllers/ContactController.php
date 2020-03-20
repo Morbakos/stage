@@ -22,6 +22,7 @@ class ContactController extends Controller
      */
     public function index($nbParPage = 15)
     {
+        // On vérifie si nbParPage est défini
         if(isset($_GET['nbParPage']))
         {
             $nbParPage = $_GET['nbParPage'];

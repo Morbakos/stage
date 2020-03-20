@@ -25,8 +25,8 @@ class ContactCreateRequest extends FormRequest
     {
         return [
             'civilite' => 'required',
-            'prenom' => 'required|string',
-            'nom' => 'required|string',
+            'prenom' => 'required|alpha',
+            'nom' => 'required|alpha',
             'email' => 'required|email'
         ];
     }
